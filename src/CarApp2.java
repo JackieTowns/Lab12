@@ -35,28 +35,41 @@ public class CarApp2 {
 			System.out.println("Which car would you like? (Please type the name)");
 			userInput = scnr.nextLine();
 
-		if (userInput.equalsIgnoreCase("ni")) {
-			System.out.println(carList.get(0));
-		} else if (userInput.equalsIgnoreCase("fo")) {
-			System.out.println(carList.get(1));
-		} else if (userInput.equalsIgnoreCase("ch")) {
-			System.out.println(carList.get(2));
-		} else if (userInput.equalsIgnoreCase("hy")) {
-			System.out.println(carList.get(3));
-		} else if (userInput.equalsIgnoreCase("qu")) {
-				break;
-		}
+			while (!userInput.equalsIgnoreCase("y")) {
 
-			if (userInput.equalsIgnoreCase("gc")) {
-				System.out.println("Chripus or Witherell?");
+				if (userInput.equalsIgnoreCase("Nikolai")) {
+					System.out.println(carList.get(0));
+				} else if (userInput.equalsIgnoreCase("Fourd")) {
+					System.out.println(carList.get(1));
+				} else if (userInput.equalsIgnoreCase("Chewie")) {
+					System.out.println(carList.get(2));
+				} else if (userInput.equalsIgnoreCase("Hyonda")) {
+					System.out.println(carList.get(3));
+				} else if (userInput.equalsIgnoreCase("Quit")) {
+					break;
+				}
+
+				if (userInput.equalsIgnoreCase("gc")) {
+					System.out.println("Chripus or Witherell?");
+				}
+				if (userInput.equalsIgnoreCase("Chirpus")) {
+					System.out.println(carList.get(4));
+				} else {
+					System.out.println(carList.get(5));
+				}
+
+				System.out.println("Would you like to buy this car?");
+				userInput = scnr.nextLine();
+				break;
+				
 			}
-			if (userInput.equalsIgnoreCase("chr")) {
-				System.out.println(carList.get(4));
-			} else
-				System.out.println(carList.get(5));
+
 
 			System.out.println("Excellent our finance department will be in touch shortly!");
 			// gotta remove from list somewhere
+
+			carList.remove(userInput);
+			continue;
 
 
 		} while (userInput.equalsIgnoreCase("qu"));
