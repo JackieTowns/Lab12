@@ -52,6 +52,7 @@ public class CarApp2 {
 
 				if (userInput.equalsIgnoreCase("gc")) {
 					System.out.println("Chripus or Witherell?");
+					userInput = scnr.nextLine();
 				} else if (userInput.equalsIgnoreCase("Chirpus")) {
 					System.out.println(carList.get(4));
 				} else {
