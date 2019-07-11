@@ -30,6 +30,7 @@ public class CarApp2 {
 				}
 				System.out.println();
 			}
+			System.out.println("Quit");
 
 			System.out.println();
 			System.out.println("Which car would you like? (Please type the name)");
@@ -51,8 +52,7 @@ public class CarApp2 {
 
 				if (userInput.equalsIgnoreCase("gc")) {
 					System.out.println("Chripus or Witherell?");
-				}
-				if (userInput.equalsIgnoreCase("Chirpus")) {
+				} else if (userInput.equalsIgnoreCase("Chirpus")) {
 					System.out.println(carList.get(4));
 				} else {
 					System.out.println(carList.get(5));
@@ -61,18 +61,14 @@ public class CarApp2 {
 				System.out.println("Would you like to buy this car?");
 				userInput = scnr.nextLine();
 				break;
-				
 			}
 
-
 			System.out.println("Excellent our finance department will be in touch shortly!");
-			// gotta remove from list somewhere
-
 			carList.remove(userInput);
 			continue;
 
 
-		} while (userInput.equalsIgnoreCase("qu"));
+		} while (!userInput.equalsIgnoreCase("qu"));
 			
 
 		System.out.println("Have a great day!!");
